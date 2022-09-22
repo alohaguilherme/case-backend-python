@@ -1,0 +1,6 @@
+@startuml
+
+Entity Vowels {
+    {static} count(word String)
+}
+@enduml 

@@ -1,0 +1,7 @@
+@startuml
+entity Words {
+    words: List[String]
+    word: String
+    order String
+}
+@enduml

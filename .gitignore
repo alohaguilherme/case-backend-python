@@ -1,0 +1,5 @@
+*.pyc
+./modules
+.pytest_cache/
+.coverage
+__pypackages__/

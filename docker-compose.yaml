@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        entrypoint: ./.docker/entrypoint.sh
+        container_name: pilar_project
+        volumes:
+            - ".:/home/python/app"
+        ports:
+            - "9000:9000"

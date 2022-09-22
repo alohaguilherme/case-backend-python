@@ -1,0 +1,4 @@
+@startuml
+skinparam actorStyle awesome
+:User: ---> (count vowels in word)
+@enduml

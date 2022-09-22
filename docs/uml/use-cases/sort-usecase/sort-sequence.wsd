@@ -1,0 +1,5 @@
+@startuml
+skinparam actorStyle awesome
+User -> Application: Request /sort {words, order}
+User <- Application: Response [words] sorted
+@enduml

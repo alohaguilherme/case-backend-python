@@ -1,0 +1,18 @@
+name: all-workflow
+on:
+    pull_request:
+        branches:
+            - develop
+jobs:
+    check-application:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pdm-project/setup-pdm@v2
+            - uses: pdm-project/setup-pdm@v2
+              name: Setup Python
+              with:
+                  python-version: "3.10"
+                  enable-pep582: true
+            - name: Install dependencies
+              run: pdm install

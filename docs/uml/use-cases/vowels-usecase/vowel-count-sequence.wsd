@@ -1,0 +1,5 @@
+@startuml
+skinparam actorStyle awesome
+User -> Application: Request /vowels_count
+User <- Application: Response {word, total_vowels}
+@enduml

@@ -1,0 +1,11 @@
+[run]
+branch=false
+dynamic_context = test_function
+omit=
+    __pypackages__/*
+[paths]
+source=
+    ./src/*_test.py
+    ./tests/*_test.py
+[html]
+directory=coverage_html_report
