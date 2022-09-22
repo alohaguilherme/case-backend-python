@@ -3,9 +3,6 @@ on:
     push:
         branches:
             - main
-    pull_request:
-        branches:
-            - main
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -28,10 +25,12 @@ jobs:
 
             - name: Deploy Application Heroku
               if: ${{github.ref == 'refs/heads/main'}}
-              uses: gonuit/heroku-docker-deploy@v1.3.3
+              uses: akhileshns/heroku-deploy@v3.12.12
               with:
-                  email: gteodorodossantos@gmail.com
                   heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
                   heroku_app_name: pilar-case
+                  heroku_email: gteodorodossantos@gmail.com
                   dockerfile_directory: ./
                   dockerfile_option: "no-cache"
+                  procfile: "web: pdm run uwsgi --init uwsgi.ini"
+                  usedocker: true
