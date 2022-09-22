@@ -18,6 +18,6 @@ jobs:
             - name: Run Lint
               run: ./scripts/lint.sh
             - name: Run Test
-              run: ./scripts/test.sh
+              run: ./scripts/tests.sh
             - name: Run Test Coverage
-              run: ./scripts/test_coverage.sh
+              run: ./scripts/tests_coverage.sh
