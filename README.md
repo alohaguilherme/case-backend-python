@@ -85,4 +85,4 @@ Este repositório tem por objetivo implementar conceitos de programação utiliz
         | `400`  | Erros de validação ou os campos informados não existem no sistema. |
         | `405`  | Método não implementado.                                           |
         | `415`  | Dados de acesso inválidos.                                         |
-        | `500`  | Error internos                                                     |
+        | `500`  | Erros internos                                                     |
