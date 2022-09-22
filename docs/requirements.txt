@@ -29,8 +29,3 @@ Fique à vontade para consultar a documentação de Python e Flask.
 CI/CD:
 Github Actions or GitLab
 
-Construa um pipeline no GitHub Actions ou GitLab que rode 3 etapas: lint, testes e deploy utilizando uma ferramenta como Python Anywhere, Heroku, AWS ou outra de sua preferência.
-
-Documentação, mensagens de commit, qualidade de código, testes unitários...tudo conta na avaliação, portanto capriche. 
-
-Quando terminar, envie a URL da API e do repositório onde seu código estiver.
