@@ -6,7 +6,7 @@
 Este repositório tem por objetivo implementar conceitos de programação utilizando a linguagem Python.
 
 ## Conteudo
-  - [Instalação](#instalação)
+  - [Configuração do ambiente](#config)
     - [Docker](#docker)
     - [Windows](#windows)
     - [Linux](#linux)
@@ -14,7 +14,8 @@ Este repositório tem por objetivo implementar conceitos de programação utiliz
     - [Tests](#tests)
     - [API](#api)
 
-## Instalação
+<a id="config"></a>
+## Configuração do ambiente
 ---
 > :warning: Neste projeto estamos utilizando ptyhon em versões >= 3.10.
 
