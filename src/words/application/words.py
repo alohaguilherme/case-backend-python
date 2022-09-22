@@ -1,6 +1,4 @@
-from ast import Raise
-from logging import raiseExceptions
-from typing import ClassVar, Dict, List, Optional, Union
+from typing import Dict, List
 from dataclasses import dataclass
 from .vowels import Vowels
 
@@ -16,7 +14,7 @@ class GroupWords:
     words: List[word]
 
     def count_vowels_list(self) -> list_words_vowels:
-        response = {}
+        response: Dict = {}
         for value in self.words:
             word = Word(value)
             total_vowels: int = word.count_vowels_in_word()

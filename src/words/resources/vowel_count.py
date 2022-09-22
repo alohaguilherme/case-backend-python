@@ -2,7 +2,7 @@ from typing import Dict, List
 from flask import request, jsonify, make_response
 from flask_restful import Resource
 from infra.http.validation import validate_request
-from words.application.words import GroupWords, Word
+from words.application.words import GroupWords
 
 # types
 

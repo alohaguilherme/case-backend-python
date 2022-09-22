@@ -1,10 +1,8 @@
-from typing import Dict, List
-from flask import Flask, request, jsonify, abort
-from werkzeug.exceptions import MethodNotAllowed, NotFound
+from flask import Flask, jsonify
+from werkzeug.exceptions import NotFound
 from flask_restful import Api
 from words.resources import Sort, VowelCount
-from infra.http import errors, validate_request
-from words.application.words import Word, GroupWords
+from infra.http import errors
 
 
 app = Flask(__name__)

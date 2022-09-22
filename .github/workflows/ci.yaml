@@ -9,10 +9,15 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: pdm-project/setup-pdm@v2
-            - uses: pdm-project/setup-pdm@v2
               name: Setup Python
               with:
                   python-version: "3.10"
                   enable-pep582: true
             - name: Install dependencies
               run: pdm install
+            - name: Run Lint
+              run: ./scripts/lint.sh
+            - name: Run Test
+              run: ./scripts/tests.sh
+            - name: Run Test Coverage
+              run: ./scripts/tests_coverage.sh
