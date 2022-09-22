@@ -8,10 +8,11 @@ Este repositório tem o objetivo de colocar conceitos de programação com a lin
 ## Conteudo
   - [Instalação](#instalação)
     - [Docker](#docker)
-    - [Windows](#Windows)
-    - [Linux](#Linux)
+    - [Windows](#windows)
+    - [Linux](#linux)
   - [Uso](#uso)
-    - [Tests][#tests]
+    - [Tests](#tests)
+    - [API](#api)
 
 ## Instalação
 ---
@@ -25,6 +26,7 @@ Este repositório tem o objetivo de colocar conceitos de programação com a lin
     docker-compose up -d --build
     ```
     isso irá buildar o arquivo Dockerfile.dev e subir um container e isso será o suficiente para começar a desenvolver, uma vez que a imagem já está configurada para instalar as libs por meio do package manager [PDM](https://pdm.fming.dev/latest/)
+  <a id="windows"></a>
 - ### Windows
     Diferente do linux o python não vem instalado por padrão no windows, então é necessario instalar manualmente, poderá acessar o executavel por esse link [python-install](https://www.python.org/downloads/)
 
@@ -39,6 +41,7 @@ Este repositório tem o objetivo de colocar conceitos de programação com a lin
     pdm install
     ```
     agora estará com todas as libs do projeto instaladas.
+   <a id="linux"></a>
 - ### Linux/wsl/Desktop enviroment
     Como identificado acima, fique atendo a versão do python. verifique o python instalado em sua distro com os comandos abaixo:
     ```bash
