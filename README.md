@@ -73,8 +73,8 @@ Este repositório tem o objetivo de colocar conceitos de programação com a lin
     
         | Método | Rota         | Descricao                                 | Body                                                        | Retorno                             |
         | ------ | ------------ | ----------------------------------------- | ----------------------------------------------------------- | ----------------------------------- |
-        | POST   | /SORT        | Ordena as palavras informadas             | {words: [ 'word1', 'word3','word2'], order: 'desc' / 'asc'} | ['word1', 'word2', 'word3']         |  |
-        | POST   | /VOWEL_COUNT | Conta a quantidade de vogais das palavras | ```{words: [ 'word1', 'word3','word2']}```                  | ```{word1:1, word2: 1, word3: 1```} |
+        | `POST`   | /SORT        | Ordena as palavras informadas             | ```{words: [ 'word1', 'word3','word2'], order: 'desc' / 'asc'}``` |   ```['word1', 'word2', 'word3']```         |  |
+        | `POST`   | /VOWEL_COUNT | Conta a quantidade de vogais das palavras | ```{words: [ 'word1', 'word3','word2']}```                  | ```{word1:1, word2: 1, word3: 1```} |
 
     * Repostas
   
