@@ -8,13 +8,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: github/super-linter@v4
-              env:
-                  VALIDATE_ALL_CODEBASE: false
-                  PYTHON_PYLINT: true
-                  DEFAULT_BRANCH: develop
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
             - uses: pdm-project/setup-pdm@v2
               name: Setup Python
               with:
@@ -22,3 +15,9 @@ jobs:
                   enable-pep582: true
             - name: Install dependencies
               run: pdm install
+            - name: Run Lint
+              run: ./scripts/lint.sh
+            - name: Run Test
+              run: ./scripts/test.sh
+            - name: Run Test Coverage
+              run: ./scripts/test_coverage.sh
