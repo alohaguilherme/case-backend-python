@@ -1,4 +1,4 @@
-name: all-workflow
+name: CI-WORKFLOW
 on:
     pull_request:
         branches:
