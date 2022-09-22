@@ -8,6 +8,7 @@ RUN pip install pdm
 
 WORKDIR /app
 COPY . .
+ENV PORT=$PORT
 ENV MY_PYTHON_PACKAGES=/app/__pypackages__/3.10
 ENV PYTHONPATH=${PYTHONPATH}/app/src
 ENV PATH $PATH:${MY_PYTHON_PACKAGES}/bin
@@ -15,7 +16,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN echo 'eval "$(pdm --pep582)"' >> ~/.bashrc
 
-EXPOSE 9000
+EXPOSE $PORT
 
 RUN pdm install --production -v
 RUN pdm sync
