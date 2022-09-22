@@ -1,2 +1,2 @@
-coverage run -m pytest -v ./tests
-coverage html --title="project_pilar"
+pdm runcoverage run -m pytest -v ./tests
+pdm runcoverage html --title="project_pilar"

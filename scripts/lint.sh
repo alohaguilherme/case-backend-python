@@ -1,2 +1,2 @@
-flake8 ./tests/
-flake8 ./src/
+pdm run flake8 ./tests/
+pdm run flake8 ./src/
