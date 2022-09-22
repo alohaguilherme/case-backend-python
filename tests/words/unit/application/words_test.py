@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import Mock, patch
 from dataclasses import is_dataclass
 from words.application.words import Word
 

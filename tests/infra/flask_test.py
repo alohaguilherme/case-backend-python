@@ -1,8 +1,6 @@
 import json
 from typing import Dict, Union
-import unittest
 import pytest
-from flask import jsonify
 from app import app as Flask
 
 
@@ -30,7 +28,7 @@ def test_should_return_status_404_in_request_different_sort_or_vowel(app):
     assert response.status_code == 404
 
 
-def test_should_return_status_400_in_request_body_notfound_in_sort_or_vowel(client):
+def test_should_return_status_400_body_notfound_in_sort_or_vowel(client):
     MOCK_RESPONSE_ERROR_JSON: Dict[str, Union[int, str]] = {
         'status': 400, 'message': 'Body is required'}
     MOCK_RESPONSE_TYPE = "application/json"
@@ -44,7 +42,7 @@ def test_should_return_status_400_in_request_body_notfound_in_sort_or_vowel(clie
     assert response.mimetype == MOCK_RESPONSE_TYPE
 
 
-def test_should_return_status_500_in_request_body_is_empty_in_sort_or_vowel(client):
+def test_should_return_status_500_body_is_empty_in_sort_or_vowel(client):
     MOCK_RESPONSE_ERROR_JSON: Dict[str, Union[int, str]] = {
         'code': 500, 'message': 'Internal Server Error'}
     MOCK_RESPONSE_TYPE = "application/json"
@@ -76,7 +74,6 @@ def test_routes_ping(app):
     response = client.get('/')
 
     assert response.status_code == 200
-    assert response.get_json() == None
     assert response.text == 'ok'
 
 
