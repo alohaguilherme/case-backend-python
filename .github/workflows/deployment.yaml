@@ -1,13 +1,17 @@
-name: CI-WORKFLOW
+name: Deployment
 on:
+    push:
+        branches:
+            - main
     pull_request:
         branches:
-            - develop
+            - main
 jobs:
-    check-application:
+    build:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+
             - uses: pdm-project/setup-pdm@v2
               name: Setup Python
               with:
@@ -21,3 +25,13 @@ jobs:
               run: ./scripts/tests.sh
             - name: Run Test Coverage
               run: ./scripts/tests_coverage.sh
+
+            - name: Deploy Application Heroku
+              if: ${{github.ref == 'refs/heads/main'}}
+              uses: gonuit/heroku-docker-deploy@v1.3.3
+              with:
+                  email: gteodorodossantos@gmail.com
+                  heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+                  heroku_app_name: pilar-case
+                  dockerfile_directory: ./
+                  dockerfile_option: "no-cache"
